@@ -1,0 +1,3 @@
+# Windows 배치 파일은 항상 CRLF, 쉘 스크립트는 항상 LF 유지
+*.bat text eol=crlf
+*.sh text eol=lf
