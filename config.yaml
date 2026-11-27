@@ -1,0 +1,29 @@
+# AutoScenarioWriter Alpha 기본 설정 파일
+# 개별 연구자의 모델/API 키/경로 설정은 웹 초기 설정 페이지를 통해
+# local_config.yaml 및 .env에 별도 저장됩니다 (Git에 커밋되지 않음).
+
+setup_completed: false
+
+server:
+  host: "0.0.0.0"      # PC(127.0.0.1) 및 같은 Wi-Fi 스마트폰 접속 지원
+  port: 8770
+
+paths:
+  # 기본 저장 경로: 현재 폴더 내 scenarios/ (MemoryAI 연동 시 ../MemoryAI/datasets/scenarios 설정 가능)
+  output_scenarios_dir: "./scenarios"
+
+llm:
+  # provider: "gemini" | "openai" | "openrouter" | "ollama" | "custom"
+  provider: "gemini"
+  model: "gemini-2.5-flash"
+  api_key_env: "GEMINI_API_KEY"
+  base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
+  timeout: 60.0
+
+defaults:
+  language: "ko"
+  cycle_days: 10
+  author: "human_researcher"
+  user_role: "인간 연구자 (사용자)"
+  agent_role: "장기기억 AI 어시스턴트"
+  domain: "일상 및 연구·개발 협업"

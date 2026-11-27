@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Local secrets & per-researcher settings (NEVER commit)
+.env
+local_config.yaml
+run_writer_bg.bat
+
+# Generated scenario datasets (local research data)
+scenarios/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
